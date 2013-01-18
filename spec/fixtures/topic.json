@@ -1,0 +1,475 @@
+{
+ "id": "/m/04g0kcw",
+ "property": {
+  "/common/topic/alias": {
+   "valuetype": "string",
+   "values": [
+    {
+     "text": "Github",
+     "lang": "en",
+     "value": "Github",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-18T10:47:44.000Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/common/topic/article": {
+   "valuetype": "compound",
+   "values": [
+    {
+     "text": "GitHub is a web-based hosting service for software development projects that use the Git...",
+     "lang": "en",
+     "id": "/m/04g0kc_",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-08T06:20:46.009Z",
+     "property": {
+      "/common/document/source_uri": {
+       "valuetype": "uri",
+       "values": [
+        {
+         "text": "http://wp/en/18545292",
+         "lang": "",
+         "value": "http://wp/en/18545292",
+         "creator": "/user/mwcl_wikipedia_en",
+         "timestamp": "2008-08-08T06:20:46.009Z"
+        }
+       ],
+       "count": 1.0
+      },
+      "/common/document/text": {
+       "valuetype": "string",
+       "values": [
+        {
+         "text": "GitHub is a web-based hosting service for software development projects that use the Git...",
+         "lang": "en",
+         "value": "GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both commercial plans and free accounts for open source projects. GitHub is the most popular Git hosting site, and the most popular open source hosting site.\nThe site provides social networking functionality such as feeds, followers and the network graph to display how developers work on their versions of a repository.\nGitHub also operates a pastebin-style site called Gist, wikis for individual repositories, and web pages that can be edited through a Git repository.\nAs of January 2010, GitHub is operated under the name GitHub, Inc.\nThe software that runs GitHub was written using Ruby on Rails and Erlang by GitHub, Inc. (previously known as Logical Awesome) developers Chris Wanstrath, PJ Hyett, and Tom Preston-Werner.\nGitHub was launched in April 2008.\nIn a talk at Yahoo! headquarters on 24 February 2009, GitHub team members announced that during the first year that GitHub was online, it accumulated 46,000 public repositories, 17,000 of them in the previous month alone. At that time, about 6,200 repositories had been forked at least once and 4,600 merged.",
+         "creator": "/user/mwcl_wikipedia_en",
+         "timestamp": "2008-08-08T06:20:46.009Z"
+        }
+       ],
+       "count": 1.0
+      },
+      "/type/object/attribution": {
+       "valuetype": "object",
+       "values": [
+        {
+         "text": "Freebase Data Team",
+         "lang": "",
+         "id": "/m/0gs8",
+         "creator": "/user/mwcl_wikipedia_en",
+         "timestamp": "2008-08-08T06:20:46.009Z"
+        }
+       ],
+       "count": 1.0
+      },
+      "/type/object/type": {
+       "valuetype": "object",
+       "values": [
+        {
+         "text": "Document",
+         "lang": "",
+         "id": "/common/document",
+         "creator": "/user/mwcl_wikipedia_en",
+         "timestamp": "2008-08-08T06:20:46.009Z"
+        }
+       ],
+       "count": 1.0
+      }
+     }
+    }
+   ],
+   "count": 1.0
+  },
+  "/common/topic/notable_for": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "Website",
+     "lang": "en",
+     "id": "/internet/website"
+    }
+   ],
+   "count": 1.0
+  },
+  "/common/topic/notable_types": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "Website",
+     "lang": "en",
+     "id": "/internet/website",
+     "timestamp": "2013-01-17T00:03:19.118Z"
+    },
+    {
+     "text": "Proposal agent",
+     "lang": "en",
+     "id": "/base/technologyofdoing/proposal_agent",
+     "timestamp": "2013-01-17T00:03:19.118Z"
+    }
+   ],
+   "count": 2.0
+  },
+  "/common/topic/official_website": {
+   "valuetype": "uri",
+   "values": [
+    {
+     "text": "http://github.com/",
+     "lang": "",
+     "value": "http://github.com/",
+     "creator": "/user/gardening_bot",
+     "timestamp": "2011-10-08T05:25:46.001Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/common/topic/topic_equivalent_webpage": {
+   "valuetype": "uri",
+   "values": [
+    {
+     "text": "http://en.wikipedia.org/wiki/index.html?curid=18545292",
+     "lang": "",
+     "value": "http://en.wikipedia.org/wiki/index.html?curid=18545292",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-08T06:20:46.009Z"
+    },
+    {
+     "text": "http://pt.wikipedia.org/wiki/index.html?curid=2108722",
+     "lang": "",
+     "value": "http://pt.wikipedia.org/wiki/index.html?curid=2108722",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-24T19:25:20.000Z"
+    },
+    {
+     "text": "http://ru.wikipedia.org/wiki/index.html?curid=1588243",
+     "lang": "",
+     "value": "http://ru.wikipedia.org/wiki/index.html?curid=1588243",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-25T02:43:28.000Z"
+    },
+    {
+     "text": "http://fr.wikipedia.org/wiki/index.html?curid=4161604",
+     "lang": "",
+     "value": "http://fr.wikipedia.org/wiki/index.html?curid=4161604",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-25T07:46:48.001Z"
+    },
+    {
+     "text": "http://de.wikipedia.org/wiki/index.html?curid=5239764",
+     "lang": "",
+     "value": "http://de.wikipedia.org/wiki/index.html?curid=5239764",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-29T20:54:44.000Z"
+    },
+    {
+     "text": "http://ru.wikipedia.org/wiki/GitHub",
+     "lang": "",
+     "value": "http://ru.wikipedia.org/wiki/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T03:13:18.001Z"
+    },
+    {
+     "text": "http://fr.wikipedia.org/wiki/GitHub",
+     "lang": "",
+     "value": "http://fr.wikipedia.org/wiki/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T06:19:45.000Z"
+    },
+    {
+     "text": "http://pt.wikipedia.org/wiki/GitHub",
+     "lang": "",
+     "value": "http://pt.wikipedia.org/wiki/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T09:45:11.001Z"
+    },
+    {
+     "text": "http://de.wikipedia.org/wiki/GitHub",
+     "lang": "",
+     "value": "http://de.wikipedia.org/wiki/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T15:41:11.000Z"
+    },
+    {
+     "text": "http://en.wikipedia.org/wiki/GitHub",
+     "lang": "",
+     "value": "http://en.wikipedia.org/wiki/GitHub",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2011-05-23T10:20:05.002Z"
+    }
+   ],
+   "count": 10.0
+  },
+  "/internet/website/category": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "Revision control",
+     "lang": "en",
+     "id": "/m/0fj8g",
+     "creator": "/user/giskard",
+     "timestamp": "2010-01-29T12:12:43.000Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/attribution": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "Freebase Data Team",
+     "lang": "en",
+     "id": "/m/0gs8",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-08T06:20:46.008Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/key": {
+   "valuetype": "key",
+   "values": [
+    {
+     "text": "/wikipedia/en_id/18545292",
+     "lang": "",
+     "value": "/wikipedia/en_id/18545292",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-08T06:20:46.009Z"
+    },
+    {
+     "text": "/en/github",
+     "lang": "",
+     "value": "/en/github",
+     "creator": "/user/topicns_loader",
+     "timestamp": "2009-02-28T15:22:15.001Z"
+    },
+    {
+     "text": "/wikipedia/de/GitHub",
+     "lang": "",
+     "value": "/wikipedia/de/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-23T09:35:04.001Z"
+    },
+    {
+     "text": "/wikipedia/pt/GitHub",
+     "lang": "",
+     "value": "/wikipedia/pt/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-23T17:54:47.000Z"
+    },
+    {
+     "text": "/wikipedia/ru/GitHub",
+     "lang": "",
+     "value": "/wikipedia/ru/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-24T11:52:03.000Z"
+    },
+    {
+     "text": "/wikipedia/pt_id/2108722",
+     "lang": "",
+     "value": "/wikipedia/pt_id/2108722",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-24T19:25:20.000Z"
+    },
+    {
+     "text": "/wikipedia/ru_id/1588243",
+     "lang": "",
+     "value": "/wikipedia/ru_id/1588243",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-25T02:43:28.000Z"
+    },
+    {
+     "text": "/wikipedia/fr_id/4161604",
+     "lang": "",
+     "value": "/wikipedia/fr_id/4161604",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-25T07:46:48.001Z"
+    },
+    {
+     "text": "/wikipedia/fr/GitHub",
+     "lang": "",
+     "value": "/wikipedia/fr/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-25T19:05:21.000Z"
+    },
+    {
+     "text": "/wikipedia/de_id/5239764",
+     "lang": "",
+     "value": "/wikipedia/de_id/5239764",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2010-09-29T20:54:44.000Z"
+    },
+    {
+     "text": "/wikipedia/ru_title/GitHub",
+     "lang": "",
+     "value": "/wikipedia/ru_title/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T03:13:18.001Z"
+    },
+    {
+     "text": "/wikipedia/fr_title/GitHub",
+     "lang": "",
+     "value": "/wikipedia/fr_title/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T06:19:45.000Z"
+    },
+    {
+     "text": "/wikipedia/pt_title/GitHub",
+     "lang": "",
+     "value": "/wikipedia/pt_title/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T09:45:11.001Z"
+    },
+    {
+     "text": "/wikipedia/de_title/GitHub",
+     "lang": "",
+     "value": "/wikipedia/de_title/GitHub",
+     "creator": "/user/wikipedia_intl",
+     "timestamp": "2011-05-22T15:41:11.000Z"
+    },
+    {
+     "text": "/wikipedia/en_title/GitHub",
+     "lang": "",
+     "value": "/wikipedia/en_title/GitHub",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2011-05-23T10:20:05.002Z"
+    },
+    {
+     "text": "/wikipedia/en/Github",
+     "lang": "",
+     "value": "/wikipedia/en/Github",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2012-08-15T05:11:01.000Z"
+    },
+    {
+     "text": "/wikipedia/en/Git_hub",
+     "lang": "",
+     "value": "/wikipedia/en/Git_hub",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2012-08-15T05:11:03.000Z"
+    },
+    {
+     "text": "/wikipedia/en/Github$002Ecom",
+     "lang": "",
+     "value": "/wikipedia/en/Github$002Ecom",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2012-08-15T05:11:05.001Z"
+    },
+    {
+     "text": "/wikipedia/en/GitHub",
+     "lang": "",
+     "value": "/wikipedia/en/GitHub",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2012-08-15T05:11:07.001Z"
+    }
+   ],
+   "count": 19.0
+  },
+  "/type/object/mid": {
+   "valuetype": "key",
+   "values": [
+    {
+     "text": "/m/04g0kcw",
+     "lang": "",
+     "value": "/m/04g0kcw"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/name": {
+   "valuetype": "string",
+   "values": [
+    {
+     "text": "GitHub",
+     "lang": "en",
+     "value": "GitHub",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-18T10:47:44.000Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/type": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "Topic",
+     "lang": "en",
+     "id": "/common/topic",
+     "creator": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-08T06:20:46.009Z"
+    },
+    {
+     "text": "Website",
+     "lang": "en",
+     "id": "/internet/website",
+     "creator": "/user/giskard",
+     "timestamp": "2010-01-29T12:12:03.000Z"
+    },
+    {
+     "text": "Proposal agent",
+     "lang": "en",
+     "id": "/base/technologyofdoing/proposal_agent",
+     "creator": "/user/techdoer",
+     "timestamp": "2012-09-10T08:18:26.000Z"
+    }
+   ],
+   "count": 3.0
+  },
+  "/type/object/guid": {
+   "valuetype": "string",
+   "values": [
+    {
+     "text": "#9202a8c04000641f8000000008e0457b",
+     "lang": "",
+     "value": "#9202a8c04000641f8000000008e0457b"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/id": {
+   "valuetype": "key",
+   "values": [
+    {
+     "text": "/en/github",
+     "lang": "",
+     "value": "/en/github"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/creator": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "mwcl_wikipedia_en",
+     "lang": "",
+     "id": "/user/mwcl_wikipedia_en",
+     "timestamp": "2008-08-08T06:20:46.008Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/timestamp": {
+   "valuetype": "datetime",
+   "values": [
+    {
+     "text": "2008-08-08T06:20:46.008Z",
+     "lang": "en",
+     "value": "2008-08-08T06:20:46.008Z"
+    }
+   ],
+   "count": 1.0
+  },
+  "/type/object/permission": {
+   "valuetype": "object",
+   "values": [
+    {
+     "text": "/boot/all_permission",
+     "lang": "",
+     "id": "/boot/all_permission"
+    }
+   ],
+   "count": 1.0
+  }
+ }
+}
