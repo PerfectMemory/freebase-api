@@ -20,7 +20,7 @@ module FreebaseAPI
     def initialize(options={})
       options = { :env => :stable, :query_options => { :limit => DEFAULT_LIMIT, :lang => DEFAULT_LANGUAGE } }.deep_merge(options)
       @env = options[:env]
-      @key = options[:key]
+      @key = options[:key] || ENV['GOOGLE_API_KEY']
       @query_options = options[:query_options]
     end
 

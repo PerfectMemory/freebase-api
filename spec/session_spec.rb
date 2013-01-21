@@ -10,8 +10,18 @@ describe FreebaseAPI::Session do
   end
 
   describe "#key" do
-    it "should return the API key" do
-      dummy_session.key.should == 'GOOGLE_API_KEY'
+    context "when key has been set manually" do
+      it "should return the API key" do
+        dummy_session.key.should == 'GOOGLE_API_KEY'
+      end
+    end
+
+    context "with the env variables defined" do
+      before { ENV['GOOGLE_API_KEY'] = 'ENV_GOOGLE_API_KEY' }
+      it "should return the API key" do
+        session.key.should == 'ENV_GOOGLE_API_KEY'
+      end
+      after { ENV['GOOGLE_API_KEY'] = nil }
     end
   end
 
