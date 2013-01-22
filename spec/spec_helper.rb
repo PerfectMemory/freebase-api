@@ -4,6 +4,9 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 require 'rubygems'
 require 'bundler/setup'
 
+require 'simplecov'
+SimpleCov.start
+
 require 'rspec'
 require 'freebase-api'
 require 'support/helpers'
