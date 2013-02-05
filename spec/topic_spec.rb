@@ -38,6 +38,18 @@ describe FreebaseAPI::Topic do
     end
   end
 
+  describe "#text" do
+    it "should return the topic text" do
+      topic.text.should == "GitHub"
+    end
+  end
+
+  describe "#lang" do
+    it "should return the topic language" do
+      topic.lang.should == 'en'
+    end
+  end
+
   describe "#name" do
     it "should return the topic name" do
       topic.name.should == 'GitHub'

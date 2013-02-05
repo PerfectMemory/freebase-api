@@ -26,6 +26,14 @@ module FreebaseAPI
       @data['id']
     end
 
+    def text
+      @data['text']
+    end
+
+    def lang
+      @data['lang']
+    end
+
     def name
       @name ||= extract_name
     end
@@ -63,7 +71,7 @@ module FreebaseAPI
       if names = property('/type/object/name')
         names.first.value
       else
-        @data['text']
+        text
       end
     end
 
