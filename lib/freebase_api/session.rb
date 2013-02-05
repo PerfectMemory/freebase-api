@@ -42,7 +42,7 @@ module FreebaseAPI
     # @return [Hash] the response
     def topic(id, options={})
       params = { :lang => @query_options[:lang], :limit => @query_options[:limit] }.merge(options)
-      response = get(surl('topic') + id, options)
+      response = get(surl('topic') + id, params)
       response
     end
 
