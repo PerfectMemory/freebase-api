@@ -16,8 +16,8 @@ module FreebaseAPI
 
     def initialize(id, options={})
       @properties = {}
-      @excluded_properties = parse_exclusion(options[:exclude])
-      @filter = options[:filter] || 'commons'
+      @excluded_properties = parse_exclusion(options.delete(:exclude))
+      @options = { :filter => 'commons' }.merge(options)
       @data = { 'id' => id }.merge(options[:data] || {})
       build
     end
@@ -61,7 +61,7 @@ module FreebaseAPI
     end
 
     def sync
-      @data = FreebaseAPI.session.topic(self.id, :filter => @filter)
+      @data = FreebaseAPI.session.topic(self.id, @options)
       build
     end
 

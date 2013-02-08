@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe FreebaseAPI::Topic do
 
-  let(:stubbed_session) { mock('session') }
-  let(:topic) { FreebaseAPI::Topic.get('/en/github') }
+  let(:options) { { :lang => :en } }
+  let(:topic) { FreebaseAPI::Topic.get('/en/github', options) }
   let(:new_topic) { FreebaseAPI::Topic.new('/en/github') }
 
   let(:data) {
@@ -11,15 +11,21 @@ describe FreebaseAPI::Topic do
   }
 
   before {
+    stubbed_session = mock('session')
     FreebaseAPI.stub(:session).and_return(stubbed_session)
     stubbed_session.stub(:topic).and_return(data)
   }
 
   describe ".get" do
-    before { FreebaseAPI::Topic.any_instance.stub(:build) }
+    let(:stubbed_session) { mock('session') }
+
+    before {
+      FreebaseAPI::Topic.any_instance.stub(:build)
+      FreebaseAPI.stub(:session).and_return(stubbed_session)
+    }
 
     it "should make a Topic API call" do
-      stubbed_session.should_receive(:topic).and_return(data)
+      stubbed_session.should_receive(:topic).with('/en/github', :lang => :en, :filter => 'commons').and_return(data)
       topic
     end
   end
