@@ -85,6 +85,42 @@ describe FreebaseAPI::Session do
     end
   end
 
+  describe "#image" do
+    let(:query) {
+      {
+        :type => '/internet/website',
+        :id => '/en/github',
+        :'/common/topic/official_website' => nil
+      }
+    }
+
+    let(:request) {
+      session.image('/en/bob_dylan')
+    }
+
+    context "when the query is successful" do
+      it "should not raise any error" do
+        expect {
+          request
+        }.to_not raise_error(FreebaseAPI::Error)
+      end
+
+      it "should return some data" do
+        request.size.should > 1000
+      end
+    end
+
+    context "when the query has failed" do
+      let(:session) { FreebaseAPI::Session.new :key => 'nil' }
+
+      it "should raise en error" do
+        expect {
+          request
+        }.to raise_error(FreebaseAPI::Error)
+      end
+    end
+  end
+
   describe "#topic" do
     let(:request) {
       session.topic('/en/github', :filter => '/common/topic/official_website')

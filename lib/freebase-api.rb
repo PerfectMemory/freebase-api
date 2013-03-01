@@ -1,6 +1,7 @@
 require 'logger'
 
 require 'freebase_api/session'
+require 'freebase_api/image'
 require 'freebase_api/version'
 require 'freebase_api/topic'
 require 'freebase_api/attribute'

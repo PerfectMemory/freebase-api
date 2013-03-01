@@ -17,7 +17,7 @@ describe FreebaseAPI::Topic do
   }
 
   describe ".get" do
-    let(:stubbed_session) { mock('session') }
+    let(:stubbed_session) { mock('session').as_null_object }
 
     before {
       FreebaseAPI::Topic.any_instance.stub(:build)
@@ -27,6 +27,10 @@ describe FreebaseAPI::Topic do
     it "should make a Topic API call" do
       stubbed_session.should_receive(:topic).with('/en/github', :lang => :en, :filter => 'commons').and_return(data)
       topic
+    end
+
+    it "should return a topic" do
+      topic.should be_kind_of FreebaseAPI::Topic
     end
   end
 

@@ -4,14 +4,22 @@ module FreebaseAPI
     attr_accessor :code, :message, :errors
 
     def initialize(params)
-      FreebaseAPI.logger.error("#{params['message']} (#{params['code']}) : #{params['errors'].first['reason']}")
+      FreebaseAPI.logger.error("#{params['message']} (#{params['code']})")
       self.code = params['code']
       self.message = params['message']
-      self.errors = params['errors']
     end
 
     def to_s
-      "<#{self.class} code=\"#{self.code}\" message=\"#{self.message}\" reason=\"#{self.errors.first['reason']}\">"
+      "#{self.message} (#{self.code})"
     end
   end
+
+  class ServiceError < Error
+    def initialize(params)
+      super
+      self.errors = params['errors']
+    end
+  end
+
+  class NetError < Error ;; end
 end

@@ -1,4 +1,3 @@
-require 'cgi'
 require 'httparty'
 require 'json'
 
@@ -31,19 +30,30 @@ module FreebaseAPI
     # @return [Hash] the response
     def mqlread(query, options={})
       params = { :query => query.to_json, :lang => "/lang/#{@query_options[:lang]}", :limit => @query_options[:limit] }.merge(options)
-      response = get(surl('mqlread'), params)
+      response = get(surl('mqlread'), params, format: :json)
       response['result']
     end
 
     # Execute a Topic query
-    # @see http://wiki.freebase.com/wiki/Topic_API0
+    # @see http://wiki.freebase.com/wiki/Topic_API
     #
-    # @param [Hash] id the MQL query
+    # @param [String] id the topic ID
+    # @param [Hash] options the MQL query options
     # @return [Hash] the response
     def topic(id, options={})
       params = { :lang => @query_options[:lang], :limit => @query_options[:limit] }.merge(options)
-      response = get(surl('topic') + id, params)
-      response
+      get(surl('topic') + id, params, format: :json)
+    end
+
+    # Execute a Image Service query
+    # @see http://wiki.freebase.com/wiki/ApiImage
+    #
+    # @param [String] id the topic ID
+    # @param [Hash] options the Image Service options
+    # @return [Hash] the response
+    def image(id, options={})
+      params = options
+      get(surl('image') + id, params).body
     end
 
     private
@@ -55,6 +65,8 @@ module FreebaseAPI
     def surl(service)
       service_url = @env == :stable ? API_URL : SANDBOX_API_URL
       service_url = service_url + "/" + service
+      service_url.gsub!('www', 'usercontent') if service.to_s == 'image'
+      service_url
     end
 
     # Make a GET request
@@ -62,10 +74,10 @@ module FreebaseAPI
     # @param [String] url the url to request
     # @param [Hash] params the params of the request
     # @return the request response
-    def get(url, params={})
+    def get(url, params={}, options={})
       FreebaseAPI.logger.debug("GET #{url}")
       params[:key] = @key if @key
-      response = self.class.get(url, :format => :json, :query => params)
+      response = self.class.get(url, :format => options[:format], :query => params)
       handle_response(response)
     end
 
@@ -78,7 +90,11 @@ module FreebaseAPI
       when 200..299
         response
       else
-        raise FreebaseAPI::Error.new(response['error'])
+        if response.request.format == :json
+          raise FreebaseAPI::ServiceError.new(response['error'])
+        else
+          raise FreebaseAPI::NetError.new('code' => response.code, 'message' => response.response.message)
+        end
       end
     end
   end
