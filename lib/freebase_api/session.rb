@@ -24,9 +24,10 @@ module FreebaseAPI
     end
 
     # Execute a MQL read query
-    # @see http://wiki.freebase.com/wiki/MQL_Read_Service
+    # @see https://developers.google.com/freebase/v1/mql-overview
     #
     # @param [Hash] query the MQL query
+    # @param [Hash] options the MQL query options
     # @return [Hash] the response
     def mqlread(query, options={})
       params = { :query => query.to_json, :lang => "/lang/#{@query_options[:lang]}", :limit => @query_options[:limit] }.merge(options)
@@ -34,11 +35,23 @@ module FreebaseAPI
       response['result']
     end
 
+    # Execute a Search query
+    # @see https://developers.google.com/freebase/v1/search
+    #
+    # @param [String] query the query to search
+    # @param [Hash] options the options
+    # @return [Hash] the response
+    def search(query, options={})
+      params = { :query => query, :lang => @query_options[:lang], :limit => @query_options[:limit] }.merge(options)
+      response = get(surl('search'), params, format: :json)
+      response['result']
+    end
+
     # Execute a Topic query
-    # @see http://wiki.freebase.com/wiki/Topic_API
+    # @see https://developers.google.com/freebase/v1/topic
     #
     # @param [String] id the topic ID
-    # @param [Hash] options the MQL query options
+    # @param [Hash] options the options
     # @return [Hash] the response
     def topic(id, options={})
       params = { :lang => @query_options[:lang], :limit => @query_options[:limit] }.merge(options)
@@ -46,10 +59,10 @@ module FreebaseAPI
     end
 
     # Execute a Image Service query
-    # @see http://wiki.freebase.com/wiki/ApiImage
+    # @see https://developers.google.com/freebase/v1/topic-response#references-to-image-objects
     #
     # @param [String] id the topic ID
-    # @param [Hash] options the Image Service options
+    # @param [Hash] options the options
     # @return [Hash] the response
     def image(id, options={})
       params = options
