@@ -6,9 +6,7 @@ describe FreebaseAPI::Topic do
   let(:topic) { FreebaseAPI::Topic.get('/en/github', options) }
   let(:new_topic) { FreebaseAPI::Topic.new('/en/github') }
 
-  let(:data) {
-    load_fixture 'topic'
-  }
+  let(:data) { load_fixture 'topic' }
 
   before {
     stubbed_session = mock('session')
@@ -31,6 +29,44 @@ describe FreebaseAPI::Topic do
 
     it "should return a topic" do
       topic.should be_kind_of FreebaseAPI::Topic
+    end
+  end
+
+   describe ".search" do
+    let(:stubbed_session) { mock('session') }
+    let(:topic_search) { FreebaseAPI::Topic.search('dylan') }
+    let(:data) { load_fixture 'search' }
+    let(:item) { topic_search.values.first }
+
+    before {
+      FreebaseAPI.stub(:session).and_return(stubbed_session)
+      stubbed_session.stub(:search).and_return(data)
+    }
+
+    it "should make a Search API call" do
+      stubbed_session.should_receive(:search).with('dylan', {}).and_return(data)
+      topic_search
+    end
+
+    it "should return an hash" do
+      topic_search.should be_kind_of Hash
+    end
+
+    it "should return ordered scores" do
+      topic_search.keys.first.should == 72.587578
+      topic_search.keys.last.should == 20.738529
+    end
+
+    it "should return topics" do
+      item.should be_kind_of(FreebaseAPI::Topic)
+    end
+
+    it "should store the id" do
+      item.id.should == '/m/01vrncs'
+    end
+
+    it "should store some properties" do
+      item.properties.keys.should == ["/type/object/name", "/common/topic/notable_for"]
     end
   end
 

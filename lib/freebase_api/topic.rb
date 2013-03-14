@@ -7,10 +7,62 @@ module FreebaseAPI
     attr_reader :properties
 
     class << self
+      # Returns a new Topic filled with all the Freebase properties
+      #
+      # @param [String] id the Freebase ID
+      # @param [Hash] options the options
+      # @return [Topic] the topic
       def get(id, options={})
         topic = Topic.new(id, options)
         topic.sync
         topic
+      end
+
+      # Search using a query and returns the results as a hash of topics score based
+      #
+      # @param [String] query the string query
+      # @param [Hash] options the options
+      # @return [Hash] the topics
+      def search(query, options={})
+        hash = {}
+        FreebaseAPI.session.search(query, options).each do |topic|
+          hash[topic['score'].to_f] = Topic.new(topic['mid'], :data => construct_data(topic))
+        end
+        hash
+      end
+
+      private
+
+      # @private
+      def construct_data(topic)
+        lang = topic['lang']
+        data = {
+          "id" => topic['mid'],
+          "lang" => lang,
+          "property" => {
+            "/type/object/name" => {
+              "valuetype" => "string",
+              "values" => [
+                {
+                 "text" => "#{topic['name']}",
+                 "lang" => lang,
+                 "value" => "#{topic['name']}"
+                }
+              ]
+            }
+          }
+        }
+        data["property"]["/common/topic/notable_for"] = {
+          "valuetype" => "object",
+          "values" => [
+            {
+             "text" => topic['notable']['name'],
+             "lang" => lang,
+             "id" => topic['notable']['id']
+            }
+          ],
+        } if topic.has_key?('notable')
+        data
       end
     end
 
