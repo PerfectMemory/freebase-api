@@ -25,5 +25,9 @@ module FreebaseAPI
       @type
     end
 
+    def inspect
+      "#<#{self.class}:0x#{self.__id__.to_s(16)} value: \"#{self.value}\", type: \"#{self.type}\">"
+    end
+
   end
 end

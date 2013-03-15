@@ -121,6 +121,10 @@ module FreebaseAPI
       FreebaseAPI::Image.get(self.id, options)
     end
 
+    def inspect
+      "#<#{self.class}:0x#{self.__id__.to_s(16)} id: \"#{self.id}\", name: \"#{self.name}\">"
+    end
+
     private
 
     def extract_name
