@@ -117,6 +117,10 @@ module FreebaseAPI
       build
     end
 
+    def image(options={})
+      FreebaseAPI::Image.get(self.id, options)
+    end
+
     private
 
     def extract_name

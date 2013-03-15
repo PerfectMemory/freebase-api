@@ -12,6 +12,7 @@ describe FreebaseAPI::Topic do
     stubbed_session = mock('session')
     FreebaseAPI.stub(:session).and_return(stubbed_session)
     stubbed_session.stub(:topic).and_return(data)
+    stubbed_session.stub(:image).and_return(nil)
   }
 
   describe ".get" do
@@ -150,6 +151,16 @@ describe FreebaseAPI::Topic do
   describe "#properties domains" do
     it "should return an hash containing the properties domains" do
       topic.properties_domains.should == { 'common' => 16, 'internet' => 1,'type' => 30 }
+    end
+  end
+
+  describe "#image" do
+    it "should return an Image" do
+      topic.image.should be_kind_of(FreebaseAPI::Image)
+    end
+
+    it "should be the topic image" do
+      topic.image.id.should == topic.id
     end
   end
 end
