@@ -1,4 +1,4 @@
-# freebase-api
+# freebase-api [![Build Status](https://travis-ci.org/PerfectMemory/freebase-api.png?branch=master)](http://travis-ci.org/mongoid/mongoid) [![Coverage Status](https://coveralls.io/repos/PerfectMemory/freebase-api/badge.png?branch=master)](https://coveralls.io/r/PerfectMemory/freebase-api) [![Code Climate](https://codeclimate.com/github/PerfectMemory/freebase-api.png)](https://codeclimate.com/github/PerfectMemory/freebase-api) [![Dependency Status](https://gemnasium.com/PerfectMemory/freebase-api.png)](https://gemnasium.com/PerfectMemory/freebase-api)
 
 freebase-api provides access to both a raw-access and an abstract-layer to the [Freebase API](http://wiki.freebase.com/wiki/Freebase_API).
 
