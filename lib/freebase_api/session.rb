@@ -55,7 +55,7 @@ module FreebaseAPI
     # @return [Hash] the response
     def topic(id, options={})
       params = { :lang => @query_options[:lang], :limit => @query_options[:limit] }.merge(options)
-      get(surl('topic') + id, params, format: :json)
+      get(surl('topic') + id, params, format: :json).parsed_response
     end
 
     # Execute a Image Service query
