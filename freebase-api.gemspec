@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Aymeric Brisse"]
   gem.email         = ["aymeric.brisse@mperfect-memory.com"]
   gem.description   = %q{A library to use the Freebase API}
-  gem.summary       = %q{A library to use the Freebase API}
+  gem.summary       = %q{Provides access to both a raw-access and an abstract-layer to the Freebase API}
   gem.homepage      = "https://github.com/PerfectMemory/freebase-api"
 
   gem.files         = `git ls-files`.split($\)
