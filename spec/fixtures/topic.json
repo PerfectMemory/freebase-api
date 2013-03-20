@@ -83,6 +83,25 @@
    ],
    "count": 1.0
   },
+  "/common/topic/description": {
+   "valuetype": "string",
+   "values": [
+    {
+     "text": "GitHub is a web-based hosting service for software development projects that use the Git...",
+     "lang": "en",
+     "value": "GitHub is a web-based hosting service for software development projects that use the Git revision control system. GitHub offers both paid plans for private repositories, and free accounts for open source projects. As of May 2011, GitHub was the most popular open source code repository site.\nGitHub Inc. was founded in 2008 and is based in San Francisco, California.\nIn July 2012, the company received US$100 million in Series A funding, primarily from Andreessen Horowitz.",
+     "creator": "/user/wikirecon_bot",
+     "project": "wikirecon",
+     "dataset": "/m/0kj4zz_",
+     "citation": {
+      "provider": "Wikipedia",
+      "statement": "Description licensed under the Creative Commons Attribution-ShareAlike License (http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License).",
+      "uri": "http://en.wikipedia.org/wiki/GitHub"
+     }
+    }
+   ],
+   "count": 17.0
+  },
   "/common/topic/notable_for": {
    "valuetype": "object",
    "values": [

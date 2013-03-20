@@ -150,7 +150,7 @@ describe FreebaseAPI::Topic do
 
   describe "#properties domains" do
     it "should return an hash containing the properties domains" do
-      topic.properties_domains.should == { 'common' => 16, 'internet' => 1,'type' => 30 }
+      topic.properties_domains.should == { 'common' => 17, 'internet' => 1,'type' => 30 }
     end
   end
 

@@ -144,8 +144,8 @@ module FreebaseAPI
     end
 
     def extract_description
-      if articles = property('/common/topic/article')
-        articles.first.property('/common/document/text').first.value
+      if description = property('/common/topic/description')
+        description.first.value
       end
     end
 
