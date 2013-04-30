@@ -171,12 +171,14 @@ module FreebaseAPI
 
     def build_property(property, content)
       unless @excluded_properties.select { |p| property.start_with?(p) }.any?
-        case content['valuetype'].to_sym
-        when :compound, :object
-          # Note : some referenced topics have empty ids, we need to exclude them
-          @properties[property] = content['values'].reject { |s| s['id'].empty? }.map { |at| Topic.new(at['id'], :data => at) }
-        else
-          @properties[property] = content['values'].map { |at| Attribute.new(at, :type => content['valuetype']) }
+        if content['valuetype']
+          case content['valuetype']
+          when 'compound', 'object'
+            # Note : some referenced topics have empty ids, we need to exclude them
+            @properties[property] = content['values'].reject { |s| s['id'].empty? }.map { |at| Topic.new(at['id'], :data => at) }
+          else
+            @properties[property] = content['values'].map { |at| Attribute.new(at, :type => content['valuetype']) }
+          end
         end
       end
     end
