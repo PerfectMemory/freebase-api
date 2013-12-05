@@ -162,4 +162,25 @@ describe FreebaseAPI::Session do
       end
     end
   end
+
+  describe "#get" do
+    let(:session) { FreebaseAPI::Session.new }
+
+    context "with a proxy env variable" do
+      before do
+        ENV['http_proxy'] = 'http://user:pass@site.com:2020'
+        session.stub(:handle_response)
+      end
+
+      it "should use the proxy" do
+        session.class.should_receive(:get) do |url, params, options|
+          params[:http_proxyaddr].should eq "site.com"
+          params[:http_proxyport].should eq 2020
+          params[:http_proxyuser].should eq "user"
+          params[:http_proxypass].should eq "pass"
+        end
+        session.send(:get, 'URL')
+      end
+    end
+  end
 end
