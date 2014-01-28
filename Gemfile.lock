@@ -23,7 +23,6 @@ GEM
     multi_json (1.7.2)
     multi_xml (0.5.5)
     rake (10.0.4)
-    redcarpet (2.2.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (2.13.0)
@@ -48,7 +47,6 @@ DEPENDENCIES
   coveralls
   freebase-api!
   rake (~> 10.0)
-  redcarpet (~> 2.2)
   rspec (~> 2.12)
   simplecov (~> 0.7)
   yard (~> 0.8)
