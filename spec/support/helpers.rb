@@ -6,7 +6,7 @@ module FreebaseAPI
     end
 
     def load_data(file)
-      IO.read(File.join(File.dirname(__FILE__), "..", "fixtures", file))
+      IO.read(File.join(File.dirname(__FILE__), "..", "fixtures", file), encoding: 'BINARY')
     end
   end
 end

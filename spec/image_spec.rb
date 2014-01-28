@@ -40,7 +40,7 @@ describe FreebaseAPI::Image do
   end
 
   describe "#size" do
-    it "should return the topic related ID" do
+    it "should return the image size" do
       image.size.should == data.size
     end
   end
