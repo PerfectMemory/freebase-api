@@ -30,7 +30,7 @@ If you have a [Google API key](https://code.google.com/apis/console), you can se
 You can override the default session by providing some options, like the language or the environment.
 
 ```ruby
-FreebaseAPI.session = FreebaseAPI::Session.new(key: 'GOOGLE_API_KEY', env: => :stable)
+FreebaseAPI.session = FreebaseAPI::Session.new(key: 'GOOGLE_API_KEY', env: :stable)
 ```
 
 Options are :
