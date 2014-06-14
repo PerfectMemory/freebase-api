@@ -45,7 +45,7 @@ describe FreebaseAPI::Session do
     end
 
     context "in a stable environnment" do
-      it "should return the sandbox service URL" do
+      it "should return the stable service URL" do
         session.send(:surl, 'service').should == 'https://www.googleapis.com/freebase/v1/service'
       end
     end
