@@ -40,29 +40,66 @@ module FreebaseAPI
           "id" => topic['mid'],
           "lang" => lang,
           "property" => {
-            "/type/object/name" => {
-              "valuetype" => "string",
-              "values" => [
-                {
-                 "text" => "#{topic['name']}",
-                 "lang" => lang,
-                 "value" => "#{topic['name']}"
-                }
-              ]
-            }
+            "/type/object/name" => build_simple_property_data("string", [{"text" => topic['name'], "lang" => lang}])
           }
         }
-        data["property"]["/common/topic/notable_for"] = {
-          "valuetype" => "object",
-          "values" => [
-            {
-             "text" => topic['notable']['name'],
-             "lang" => lang,
-             "id" => topic['notable']['id']
-            }
-          ],
-        } if topic.has_key?('notable')
+        if topic.has_key?('notable')
+          data["property"]["/common/topic/notable_for"] = build_simple_property_data("object",
+            [{
+              "text" => topic['notable']['name'],
+              "lang" => lang,
+              "id" => topic['notable']['id']
+            }])
+        end
+        merge_custom_output(topic['output'], data["property"], lang) if topic.has_key?('output')
         data
+      end
+
+      # @private
+      def build_simple_property_data(type, values)
+        values_f = values.map do |v|
+          hash = { "lang" => v["lang"], "text" => v["text"].to_s }
+          if v.has_key?("id")
+            hash["id"] = v["id"]
+          else
+            hash["value"] = v["text"]
+          end
+          hash
+        end
+        {
+          "valuetype" => type,
+          "values" => values_f
+        }
+      end
+
+      # @private
+      def merge_custom_output(output, properties, lang)
+        values = nil
+        valuetype = nil
+        output.each do |_, hash|
+          hash.each do |property, values|
+            if values.first.is_a?(Hash)
+              values = values.map do |value|
+                {
+                 "text" => value['name'],
+                 "lang" => lang,
+                 "id" => value['mid']
+                }
+              end
+              valuetype = "object"
+            else
+              values = values.map do |value|
+                {
+                 "text" => "#{value}",
+                 "lang" => lang,
+                 "value" => "#{value}"
+                }
+              end
+              valuetype = "string"
+            end
+            properties[property] = build_simple_property_data(valuetype, values)
+          end
+        end
       end
     end
 
