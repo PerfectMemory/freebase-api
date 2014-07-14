@@ -21,7 +21,7 @@ module FreebaseAPI
       @env = options[:env]
       @key = options[:key] || ENV['GOOGLE_API_KEY']
       @query_options = options[:query_options]
-      @proxy_options = get_proxy_options
+      @proxy_options = get_proxy_options(options[:proxy])
     end
 
     # Execute a MQL read query
@@ -117,9 +117,9 @@ module FreebaseAPI
     # Get the proxy options for HTTParty
     #
     # @return [Hash] the proxy options
-    def get_proxy_options
+    def get_proxy_options(url=nil)
       options = {}
-      if url = ENV['HTTPS_PROXY'] || ENV['https_proxy'] || ENV['HTTP_PROXY'] || ENV['http_proxy']
+      if url = url || ENV['HTTPS_PROXY'] || ENV['https_proxy'] || ENV['HTTP_PROXY'] || ENV['http_proxy']
         proxy_uri = URI.parse(url)
         options[:http_proxyaddr] = proxy_uri.host
         options[:http_proxyport] = proxy_uri.port
