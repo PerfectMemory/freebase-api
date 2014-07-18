@@ -37,6 +37,7 @@ Options are :
 
 * `:key` : your Google API key
 * `:env` : the environment (sandbox or stable) (default is :stable)
+* `:proxy` : an optional url for a proxy that requests will be sent through
 * `:query_options` : some options that will be used in each query
  * `:limit` : the number of items returned (default is 10)
  * `:lang` : the language you would like the content in (default is 'en')
