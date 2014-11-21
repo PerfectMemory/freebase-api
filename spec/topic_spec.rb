@@ -55,7 +55,7 @@ describe FreebaseAPI::Topic do
 
     it "should return ordered scores" do
       topic_search.keys.first.should == 72.587578
-      topic_search.keys.last.should == 20.738529
+      topic_search.keys.last.should == 27.369299
     end
 
     it "should return topics" do
@@ -68,6 +68,14 @@ describe FreebaseAPI::Topic do
 
     it "should store some properties" do
       item.properties.keys.should == ["/type/object/name", "/common/topic/notable_for"]
+    end
+
+    context "with output" do
+      let(:data) { load_fixture 'search_with_output' }
+
+      it "should store some properties" do
+        item.properties.keys.should == ["/type/object/name", "/common/topic/notable_for", "/common/topic/description"]
+      end
     end
   end
 

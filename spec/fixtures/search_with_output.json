@@ -1,0 +1,56 @@
+[
+  {
+    "mid": "/m/01vrncs",
+    "id": "/en/bob_dylan",
+    "name": "Bob Dylan",
+    "notable": {
+      "name": "Folk rock Artist",
+      "id": "/m/016jny"
+    },
+    "lang": "en",
+    "score": 82.743378,
+    "output": {
+      "description": {
+        "/common/topic/description": [
+          "Bob Dylan is an American singer-songwriter, artist, and writer. He has been an influential figure in popular music and culture for more than five decades. Much of his most celebrated work dates from the 1960s, when he was both a chronicler and a reluctant figurehead of social unrest. A number of Dylan's early songs, such as \"Blowin' in the Wind\" and \"The Times They Are a-Changin'\", became anthems for the American civil rights and anti-war movements. Leaving behind his initial base in the culture of the folk music revival, Dylan's six-minute single \"Like a Rolling Stone\" radically altered the parameters of popular music in 1965. His mid-1960s recordings, backed by rock musicians, reached the top end of the United States music charts while also attracting denunciation and criticism from others in the folk movement.\nDylan's lyrics have incorporated a variety of political, social, philosophical, and literary influences. They defied existing pop music conventions and appealed hugely to the then burgeoning counterculture."
+        ]
+      }
+    }
+  },
+  {
+    "mid": "/m/04prwq",
+    "id": "/en/dylan_and_cole_sprouse",
+    "name": "Dylan and Cole Sprouse",
+    "notable": {
+      "name": "Singer",
+      "id": "/m/0290ngj"
+    },
+    "lang": "en",
+    "score": 39.279640,
+    "output": {
+      "description": {
+        "/common/topic/description": [
+          "Dylan Thomas Sprouse and Cole Mitchell Sprouse are American actors. They are twins and are collectively referred to as Dylan and Cole Sprouse or the Sprouse brothers, usually abbreviated as Sprouse Bros. Their first major theatrical film role was in Big Daddy, where they starred alongside Adam Sandler. They later appeared in several television sitcoms and starred in the straight-to-DVD films, I Saw Mommy Kissing Santa Claus and Just for Kicks.\nIn 2005, they starred in the Disney Channel sitcom The Suite Life of Zack & Cody. As a result of the series' success, the media has termed them \"heartthrobs\" and \"overwhelming draws\" among preteen and teen audiences. The following year, the brothers launched a franchise known as the Sprouse Bros brand, which included a clothing line, book series and magazine. The majority of the Sprouses' franchise ended in 2008, except for their clothing line. The Suite Life of Zack & Cody was retooled in 2008 as The Suite Life on Deck, in which the brothers reprised their roles as Zack and Cody. The Suite Life on Deck went on to become the most-watched tween/children's television show in 2008 and 2009. The show ended in May 2011."
+        ]
+      }
+    }
+  },
+  {
+    "mid": "/m/02fkm",
+    "id": "/en/dylan_thomas",
+    "name": "Dylan Thomas",
+    "notable": {
+      "name": "Novelist",
+      "id": "/m/02xhgwq"
+    },
+    "lang": "en",
+    "score": 38.964607,
+    "output": {
+      "description": {
+        "/common/topic/description": [
+          "Dylan Marlais Thomas was a Welsh poet and writer whose works include the poems \"Do not go gentle into that good night\" and \"And death shall have no dominion\", the \"play for voices\", Under Milk Wood, and stories and radio broadcasts such as A Child's Christmas in Wales and Portrait of the Artist as a Young Dog. He became popular in his lifetime and remained so after his premature death in New York. In his later life he acquired a reputation, which he encouraged, as a \"roistering, drunken and doomed poet\".\nThomas was born in Swansea, Wales, in 1914. An undistinguished pupil, he left school at 16, becoming a journalist for a short time. Although many of his works appeared in print while he was still a teenager, it was the publication of \"Light breaks where no sun shines\", in 1934, that caught the attention of the literary world. While living in London, Thomas met Caitlin Macnamara, whom he married in 1937. Their relationship was defined by alcoholism and was mutually destructive. In the early part of his marriage, Thomas and his family lived hand-to-mouth, settling in the Welsh fishing village of Laugharne."
+        ]
+      }
+    }
+  }
+]
